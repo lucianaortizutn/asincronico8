@@ -6,12 +6,10 @@ interface IPropsMiPrimerComponent {
     fontSize?: number
 }
 
-const MiPrimerComponent  : FC<IPropsMiPrimerComponent> = ({text, color, fontSize}) => {
+export const MiPrimerComponent  : FC<IPropsMiPrimerComponent> = ({text, color, fontSize}) => {
   return (
     <div style={{color: `${color}`, fontSize: `${fontSize || 1}rem`}}>
         <p>{text}</p>
     </div>
   )
 }
-
-export default MiPrimerComponent

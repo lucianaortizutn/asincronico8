@@ -1,27 +1,18 @@
 import { ChangeEvent, useState } from "react"
+import { useForm } from "../../hooks/useForm"
 
 export const FormComponent = () => {
 
-  const [values, setValues] = useState({
-    email: "",
-    nombre: "",
-    edad: 0,
-  })
+  const {values, handleChange, resetForm} = useForm({email: '', nombre: '', edad: 0})
 
   const {email, nombre, edad} = values
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const {value, name} = event.target;
-
-    if (name != 'edad') {
-      setValues({...values, [`${name}`]: value})
-    } else {
-      setValues({...values, [`${name}`]: parseInt(value)})
-    }
+  const handleSubmitForm = () => {
+    console.log(values)
   }
 
-  const handleSubmitForm = () => {
-    console.log({values});
+  const handleResetForm = () => {
+    resetForm()
   }
 
   return (
@@ -36,6 +27,7 @@ export const FormComponent = () => {
       </div>
       <div>
         <button onClick={handleSubmitForm}>Enviar</button>
+        <button onClick={handleResetForm}>Resetear</button>
       </div>
     </div>
   )

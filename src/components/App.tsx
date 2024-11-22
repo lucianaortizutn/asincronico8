@@ -1,7 +1,4 @@
-import { ComponentCounter } from "./ComponentCounter/ComponentCounter"
-import { ComponentUseEffect } from "./ComponentUseEffect/ComponentUseEffect"
-import { FormComponent } from "./FormComponent/FormComponent"
-import { MiPrimerComponent } from "./MiPrimerComponent/MiPrimerComponent"
+import { AppProduct } from "./AppProduct/AppProduct"
 
 export const App = () => {
   return (
@@ -9,7 +6,8 @@ export const App = () => {
         {/* <MiPrimerComponent text={'Texto desde propiedades'} color={'green'} fontSize={3}/> */}
         {/* <ComponentCounter/> */}
         {/* <ComponentUseEffect/> */}
-        <FormComponent/>
+        {/* <FormComponent/> */}
+        <AppProduct/>
     </div>
     
   )

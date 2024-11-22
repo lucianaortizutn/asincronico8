@@ -8,7 +8,7 @@ export const FormComponent = () => {
   const {email, nombre, edad} = values
 
   const handleSubmitForm = () => {
-    console.log(values)
+    
   }
 
   const handleResetForm = () => {

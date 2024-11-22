@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 interface ItemProduct {
   precio: number,
@@ -13,7 +13,7 @@ interface IPropsListProducts {
 
 export const ListProducts: FC<IPropsListProducts> = ({ arrItems }) => {
   return (
-    <div className="p-4 m-3 border rounded d-grid gap-2" style={{gridTemplateColumns: "repeat(2, 1fr)", justifyItems: "center", alignItems: "center"}}>
+    <div className="p-4 border rounded d-grid gap-2" style={{gridTemplateColumns: "repeat(2, 1fr)", justifyItems: "center", alignItems: "center"}}>
       {
         arrItems.map((el, i) => (
           <Card key={i} style={{ width: '18rem' }}>

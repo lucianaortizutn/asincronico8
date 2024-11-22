@@ -14,7 +14,7 @@ export const AppProduct = () => {
     const [products, setProducts] = useState<ItemProduct[]>([])
 
     const handleAddProduct = (newItem: ItemProduct) => {
-        setProducts((prev) => [...products, newItem])
+        setProducts(() => [...products, newItem])
     }
 
 
